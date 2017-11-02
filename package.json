@@ -1,0 +1,31 @@
+{
+  "name": "project_picker",
+  "version": "1.0.0",
+  "description": "<!-- Google Doc For Project --> https://docs.google.com/document/d/1n18YXXoc4n_e2_-3KdOEyBm_hLRpaCxt-yzJskgu0iU/edit",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SCRW-Project2/Project2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SCRW-Project2/Project2/issues"
+  },
+  "homepage": "https://github.com/SCRW-Project2/Project2#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "install": "^0.10.1",
+    "mysql2": "^1.4.2",
+    "sequelize": "^4.20.3",
+    "snpm": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
