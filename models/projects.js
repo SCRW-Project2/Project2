@@ -1,30 +1,27 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
-
-
+module.exports = function(sequelize,DataTypes) {
   var Projects = sequelize.define("Projects", {
     position: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
 
     project: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
     type: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
     duration: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         len: [1]
@@ -32,7 +29,7 @@ var sequelize = require("../config/connection.js");
 
     },
     language: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
@@ -40,7 +37,7 @@ var sequelize = require("../config/connection.js");
 
     },
     technology: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
@@ -48,7 +45,7 @@ var sequelize = require("../config/connection.js");
 
     },
     interests: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
@@ -56,7 +53,7 @@ var sequelize = require("../config/connection.js");
 
     },
     difficulty: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         len: [1]
@@ -64,6 +61,5 @@ var sequelize = require("../config/connection.js");
     },
   });
 
-  Projects.sync();
-
-  module.exports = Projects;
+  return Projects;
+};
