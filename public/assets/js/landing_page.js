@@ -26,6 +26,7 @@ $(document).ready(function() {
     };
 
     $.post("/api/newUser", newUser);
+    window.location.replace("/questionnaire.html");
   } 
 
 
