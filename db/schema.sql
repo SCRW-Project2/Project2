@@ -6,11 +6,11 @@ USE projectsDB;
 CREATE TABLE picker (
   position INT NOT NULL,
   project VARCHAR(50) NOT NULL,
-  type VARCHAR(15) NOT NULL,
+  whatType VARCHAR(15) NOT NULL,
   duration INT NOT NULL,
-  group INT NOT NULL,
-  language VARCHAR(15) NULL,
-  technology VARCHAR(15) NULL,
+  whatGroup INT NOT NULL,
+  whatLanguage VARCHAR(15) NULL,
+  whatTechnology VARCHAR(15) NULL,
   interests VARCHAR(15) NULL,
   difficulty INT NOT NULL,
   
