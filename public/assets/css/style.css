@@ -2268,5 +2268,7 @@ a.list-group-item.active > .badge,
         font-size: 11px;
     }
 }
-
+.btn-group btn-group-justified {
+	width: 66% !important!;
+}
 
