@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
+
+        <meta name="description" content="Violate Responsive Admin Template">
+        <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+
+        <title>Project Picker - Bamazon</title>
+            
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/form.css" rel="stylesheet">
+        <link href="css/calendar.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/icons.css" rel="stylesheet">
+        <link href="css/generics.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    </head>
+    <body id="skin-blur-chrome">
+
+        <header id="header" class="media">
+            <a href="" id="menu-toggle"></a> 
+            <a class="logo pull-left" href="index.html">Project Picker</a>
+            
+            <div class="media-body">
+                <div class="media" id="top-menu">
+
+
+                    
+
+                    <div id="time" class="pull-right">
+                        <span id="hours"></span>
+                        :
+                        <span id="min"></span>
+                        :
+                        <span id="sec"></span>
+                    </div>
+                    
+                    <div class="media-body">
+                        <input type="text" class="main-search">
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="clearfix"></div>
+        
+        <section id="main" class="p-relative" role="main">
+            
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                
+                <!-- Sidbar Widgets -->
+                <div class="side-widgets overflow">
+                    <!-- Profile Menu -->
+                    <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
+                        <a href="" data-toggle="dropdown">
+                            <img class="profile-pic animated" src="../assets/images/avatar4.png" alt="">
+                        </a>
+                        <ul class="dropdown-menu profile-menu">
+                            <li><a href="">My Profile</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                        </ul>
+                        <h4 class="m-0">Stephen Ruan</h4>
+                        @ruan060606
+                    </div>
+                    
+                    <!-- Calendar -->
+                    <div class="s-widget m-b-25">
+                        <div id="sidebar-calendar"></div>
+                    </div>
+                    
+
+                    
+                    <!-- Projects -->
+                    <div class="s-widget m-b-25">
+                        <h2 class="tile-title">
+                            Projects on going
+                        </h2>
+                        
+                        <div class="s-widget-body">
+                            <div class="side-border">
+                                <small>Project Picker</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-danger" style="width: 60%;" data-original-title="60%">
+                                          <span class="sr-only">60% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Side Menu -->
+                <ul class="list-unstyled side-menu">
+                    <li class="active">
+                        <a class="sa-side-home" href="index.html">
+                            <span class="menu-item">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-typography" href="typography.html">
+                            <span class="menu-item">Add Project</span>
+                        </a>
+                    </li>
+                    </li>
+                                        <li>
+                        <a class="sa-side-page" href="login.html">
+                            <span class="menu-item">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </aside>
+        
+            <!-- Content -->
+            <section id="content" class="container">
+            
+    
+  <div class="row">
+    <div class="col-sm-9">
+      <h1>Recommended Project:</h1>
+      <hr>
+      <h2>Bamazon</h2>
+      <center>
+        <img class="media" src="../public/assets/images/bamazon.png">
+      </center>
+      <br><br>
+      <p>In this activity, you'll be creating an Amazon-like storefront with the MySQL skills you learned this week. The app will take in orders from customers and deplete stock from the store's inventory. As a bonus task, you can program your app to track product sales across your store's departments and then provide a summary of the highest-grossing departments in the store.
+        <br><br>
+      Make sure you save and require the MySQL and Inquirer npm packages in your homework files--your app will need them for data input and storage.</p>
+      <br><br>
+      
+      <hr>
+      <h2>Instructions</h2>
+      <br><br>
+      <p>### Challenge #1: Customer View (Minimum Requirement)</p>
+<p>
+1. Create a MySQL Database called `bamazon`.
+</p><p>
+2. Then create a Table inside of that database called `products`.
+</p><p>
+3. The products table should have each of the following columns:
+</p><p>
+   * item_id (unique id for each product)
+<br>
+   * product_name (Name of product)
+<br>
+   * department_name
+<br>
+   * price (cost to customer)
+<br>
+   * stock_quantity (how much of the product is available in stores)
+</p><p>
+4. Populate this database with around 10 different products. (i.e. Insert "mock" data rows into this database and table).
+</p><p>
+5. Then create a Node application called `bamazonCustomer.js`. Running this application will first display all of the items available for sale. Include the ids, names, and prices of products for sale.
+</p><p>
+6. The app should then prompt users with two messages.
+</p><p>
+   * The first should ask them the ID of the product they would like to buy.<br>
+   * The second message should ask how many units of the product they would like to buy.
+</p><p>
+7. Once the customer has placed the order, your application should check if your store has enough of the product to meet the customer's request.
+</p><p>
+   * If not, the app should log a phrase like `Insufficient quantity!`, and then prevent the order from going through.
+</p><p>
+8. However, if your store _does_ have enough of the product, you should fulfill the customer's order.
+</p><p>
+   * This means updating the SQL database to reflect the remaining quantity.<br>
+   * Once the update goes through, show the customer the total cost of their purchase.
+</p><p>
+- - -
+</p><p>
+* If this activity took you between 8-10 hours, then you've put enough time into this assignment. Feel free to stop here -- unless you want to take on the next challenge.
+</p><p>
+- - -
+</p><p>
+### Challenge #2: Manager View (Next Level)
+</p><p>
+* Create a new Node application called `bamazonManager.js`. Running this application will:
+</p><p>
+  * List a set of menu options:
+</p><p>
+    * View Products for Sale
+    * View Low Inventory
+    * Add to Inventory
+    * Add New Product
+</p><p>
+  * If a manager selects `View Products for Sale`, the app should list every available item: the item IDs, names, prices, and quantities.
+<br>
+  * If a manager selects `View Low Inventory`, then it should list all items with an inventory count lower than five.
+<br>
+  * If a manager selects `Add to Inventory`, your app should display a prompt that will let the manager "add more" of any item currently in the store.
+<br>
+  * If a manager selects `Add New Product`, it should allow the manager to add a completely new product to the store.
+</p><p>
+- - -
+<br>
+* If you finished Challenge #2 and put in all the hours you were willing to spend on this activity, then rest easy! Otherwise continue to the next and final challenge.
+<br>
+- - -
+</p><p>
+### Challenge #3: Supervisor View (Final Level)
+</p><p>
+1. Create a new MySQL table called `departments`. Your table should include the following columns:
+</p><p>
+   * department_id
+<br>
+   * department_name
+<br>
+   * over_head_costs (A dummy number you set for each department)
+</p><p>
+2. Modify the products table so that there's a product_sales column and modify the `bamazonCustomer.js` app so that this value is updated with each individual products total revenue from each sale.
+</p><p>
+3. Modify your `bamazonCustomer.js` app so that when a customer purchases anything from the store, the price of the product multiplied by the quantity purchased is added to the product's product_sales column.
+</p><p>
+   * Make sure your app still updates the inventory listed in the `products` column.
+</p><p>
+4. Create another Node app called `bamazonSupervisor.js`. Running this application will list a set of menu options:
+</p><p>
+   * View Product Sales by Department
+<br>
+   * Create New Department
+</p><p>
+5. When a supervisor selects `View Product Sales by Department`, the app should display a summarized table in their terminal/bash window. Use the table below as a guide.
+</p><p>
+| department_id | department_name | over_head_costs | product_sales | total_profit |<br>
+| ------------- | --------------- | --------------- | ------------- | ------------ |<br>
+| 01            | Electronics     | 10000           | 20000         | 10000        |<br>
+| 02            | Clothing        | 60000           | 100000        | 40000        |<br>
+</p><p>
+6. The `total_profit` column should be calculated on the fly using the difference between `over_head_costs` and `product_sales`. `total_profit` should not be stored in any database. You should use a custom alias.
+</p><p>
+7. If you can't get the table to display properly after a few hours, then feel free to go back and just add `total_profit` to the `departments` table.
+</p><p>
+   * Hint: You may need to look into aliases in MySQL.
+<br>
+   * Hint: You may need to look into GROUP BYs.
+<br>
+   * Hint: You may need to look into JOINS.
+<br>
+   * **HINT**: There may be an NPM package that can log the table to the console. What's is it? Good question :)
+</p>
+          <hr>
+
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      
+      <p><span class="badge">2</span> Comments:</p><br>
+      
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="../public/assets/images/avatar1.png" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Rachel <small>Sep 29, 2015, 9:12 PM</small></h4>
+          <p>
+            Perfect group project!
+          </p>
+          <br>
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="../public/assets/images/avatar2.png" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Whit <small>Sep 25, 2015, 8:25 PM</small></h4>
+          <p>
+            AYEEE!!!
+          </p>
+          <br>
+          <p><span class="badge">1</span> Comment:</p><br>
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="../public/assets/images/avatar3.png" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-xs-10">
+              <h4>Collin <small>Sep 25, 2015, 8:28 PM</small></h4>
+              <p>
+                YAAAAHHH!!!!
+              </p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+          
+            </section>
+
+
+        </section>
+        
+        <!-- Javascript Libraries -->
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script> <!-- jQuery Library -->
+        <script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
+        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Charts -->
+        <script src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->
+        <script src="js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
+        <script src="js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
+        <script src="js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
+
+        <script src="js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
+        <script src="js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
+        <script src="js/charts.js"></script> <!-- All the above chart related functions -->
+
+        <!-- Map -->
+        <script src="js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
+        <script src="js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
+
+        <!--  Form Related -->
+        <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+
+        <!-- UX -->
+        <script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+
+        <!-- Other -->
+        <script src="js/calendar.min.js"></script> <!-- Calendar -->
+        <script src="js/feeds.min.js"></script> <!-- News Feeds -->
+        
+
+        <!-- All JS functions -->
+        <script src="js/functions.js"></script>
+    </body>
+</html>
