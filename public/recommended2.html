@@ -70,10 +70,114 @@
       <hr>
       <h2>Instructions</h2>
       <br><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu mauris sit amet nibh sagittis pharetra in a mauris. Fusce luctus, mauris interdum fringilla condimentum, lacus risus convallis dui, non consectetur dolor lectus at est. Suspendisse pellentesque ornare mauris, eu vulputate eros vehicula et. Vestibulum ultrices viverra blandit. Sed augue lorem, pellentesque sed rutrum non, varius et diam. Vestibulum a tempus magna. Mauris tincidunt sapien vitae orci venenatis, ut maximus felis mattis. Vivamus bibendum tristique justo elementum lobortis. Vestibulum congue neque eget felis vulputate pretium. Suspendisse libero nunc, vehicula ac consectetur vitae, dapibus in risus.
-      	 <br><br>
-
-		Duis nec leo semper, convallis massa at, pretium risus. Nam mattis purus vel dui vulputate imperdiet. Nunc iaculis tempor justo rhoncus volutpat. Mauris ac semper quam, vel facilisis lacus. Proin sodales rhoncus sollicitudin. Nam tristique bibendum arcu, a interdum felis cursus eget. Cras semper iaculis massa. Cras nec tortor eu tortor maximus ultrices. Duis eleifend nibh sit amet urna tristique, sed ullamcorper odio egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec tempus non tellus in varius..</p>
+      <p>### Challenge #1: Customer View (Minimum Requirement)</p>
+<p>
+1. Create a MySQL Database called `bamazon`.
+</p><p>
+2. Then create a Table inside of that database called `products`.
+</p><p>
+3. The products table should have each of the following columns:
+</p><p>
+   * item_id (unique id for each product)
+<br>
+   * product_name (Name of product)
+<br>
+   * department_name
+<br>
+   * price (cost to customer)
+<br>
+   * stock_quantity (how much of the product is available in stores)
+</p><p>
+4. Populate this database with around 10 different products. (i.e. Insert "mock" data rows into this database and table).
+</p><p>
+5. Then create a Node application called `bamazonCustomer.js`. Running this application will first display all of the items available for sale. Include the ids, names, and prices of products for sale.
+</p><p>
+6. The app should then prompt users with two messages.
+</p><p>
+   * The first should ask them the ID of the product they would like to buy.<br>
+   * The second message should ask how many units of the product they would like to buy.
+</p><p>
+7. Once the customer has placed the order, your application should check if your store has enough of the product to meet the customer's request.
+</p><p>
+   * If not, the app should log a phrase like `Insufficient quantity!`, and then prevent the order from going through.
+</p><p>
+8. However, if your store _does_ have enough of the product, you should fulfill the customer's order.
+</p><p>
+   * This means updating the SQL database to reflect the remaining quantity.<br>
+   * Once the update goes through, show the customer the total cost of their purchase.
+</p><p>
+- - -
+</p><p>
+* If this activity took you between 8-10 hours, then you've put enough time into this assignment. Feel free to stop here -- unless you want to take on the next challenge.
+</p><p>
+- - -
+</p><p>
+### Challenge #2: Manager View (Next Level)
+</p><p>
+* Create a new Node application called `bamazonManager.js`. Running this application will:
+</p><p>
+  * List a set of menu options:
+</p><p>
+    * View Products for Sale
+    * View Low Inventory
+    * Add to Inventory
+    * Add New Product
+</p><p>
+  * If a manager selects `View Products for Sale`, the app should list every available item: the item IDs, names, prices, and quantities.
+<br>
+  * If a manager selects `View Low Inventory`, then it should list all items with an inventory count lower than five.
+<br>
+  * If a manager selects `Add to Inventory`, your app should display a prompt that will let the manager "add more" of any item currently in the store.
+<br>
+  * If a manager selects `Add New Product`, it should allow the manager to add a completely new product to the store.
+</p><p>
+- - -
+<br>
+* If you finished Challenge #2 and put in all the hours you were willing to spend on this activity, then rest easy! Otherwise continue to the next and final challenge.
+<br>
+- - -
+</p><p>
+### Challenge #3: Supervisor View (Final Level)
+</p><p>
+1. Create a new MySQL table called `departments`. Your table should include the following columns:
+</p><p>
+   * department_id
+<br>
+   * department_name
+<br>
+   * over_head_costs (A dummy number you set for each department)
+</p><p>
+2. Modify the products table so that there's a product_sales column and modify the `bamazonCustomer.js` app so that this value is updated with each individual products total revenue from each sale.
+</p><p>
+3. Modify your `bamazonCustomer.js` app so that when a customer purchases anything from the store, the price of the product multiplied by the quantity purchased is added to the product's product_sales column.
+</p><p>
+   * Make sure your app still updates the inventory listed in the `products` column.
+</p><p>
+4. Create another Node app called `bamazonSupervisor.js`. Running this application will list a set of menu options:
+</p><p>
+   * View Product Sales by Department
+<br>
+   * Create New Department
+</p><p>
+5. When a supervisor selects `View Product Sales by Department`, the app should display a summarized table in their terminal/bash window. Use the table below as a guide.
+</p><p>
+| department_id | department_name | over_head_costs | product_sales | total_profit |<br>
+| ------------- | --------------- | --------------- | ------------- | ------------ |<br>
+| 01            | Electronics     | 10000           | 20000         | 10000        |<br>
+| 02            | Clothing        | 60000           | 100000        | 40000        |<br>
+</p><p>
+6. The `total_profit` column should be calculated on the fly using the difference between `over_head_costs` and `product_sales`. `total_profit` should not be stored in any database. You should use a custom alias.
+</p><p>
+7. If you can't get the table to display properly after a few hours, then feel free to go back and just add `total_profit` to the `departments` table.
+</p><p>
+   * Hint: You may need to look into aliases in MySQL.
+<br>
+   * Hint: You may need to look into GROUP BYs.
+<br>
+   * Hint: You may need to look into JOINS.
+<br>
+   * **HINT**: There may be an NPM package that can log the table to the console. What's is it? Good question :)
+</p>
 		      <hr>
 
       <h4>Leave a Comment:</h4>
@@ -89,28 +193,34 @@
       
       <div class="row">
         <div class="col-sm-2 text-center">
-          <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+          <img src="../public/assets/images/avatar1.png" class="img-circle" height="65" width="65" alt="Avatar">
         </div>
         <div class="col-sm-10">
-          <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h4>Rachel <small>Sep 29, 2015, 9:12 PM</small></h4>
+          <p>
+            Perfect group project!
+          </p>
           <br>
         </div>
         <div class="col-sm-2 text-center">
-          <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+          <img src="../public/assets/images/avatar2.png" class="img-circle" height="65" width="65" alt="Avatar">
         </div>
         <div class="col-sm-10">
-          <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h4>Whit <small>Sep 25, 2015, 8:25 PM</small></h4>
+          <p>
+            AYEEE!!!
+          </p>
           <br>
           <p><span class="badge">1</span> Comment:</p><br>
           <div class="row">
             <div class="col-sm-2 text-center">
-              <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+              <img src="../public/assets/images/avatar3.png" class="img-circle" height="65" width="65" alt="Avatar">
             </div>
             <div class="col-xs-10">
-              <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
-              <p>Lorem ipsum</p>
+              <h4>Collin <small>Sep 25, 2015, 8:28 PM</small></h4>
+              <p>
+                YAAAAHHH!!!!
+              </p>
               <br>
             </div>
           </div>

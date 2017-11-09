@@ -136,10 +136,58 @@
     
       <h2>Instructions</h2>
       <br><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu mauris sit amet nibh sagittis pharetra in a mauris. Fusce luctus, mauris interdum fringilla condimentum, lacus risus convallis dui, non consectetur dolor lectus at est. Suspendisse pellentesque ornare mauris, eu vulputate eros vehicula et. Vestibulum ultrices viverra blandit. Sed augue lorem, pellentesque sed rutrum non, varius et diam. Vestibulum a tempus magna. Mauris tincidunt sapien vitae orci venenatis, ut maximus felis mattis. Vivamus bibendum tristique justo elementum lobortis. Vestibulum congue neque eget felis vulputate pretium. Suspendisse libero nunc, vehicula ac consectetur vitae, dapibus in risus.
-         <br><br>
-
-        Duis nec leo semper, convallis massa at, pretium risus. Nam mattis purus vel dui vulputate imperdiet. Nunc iaculis tempor justo rhoncus volutpat. Mauris ac semper quam, vel facilisis lacus. Proin sodales rhoncus sollicitudin. Nam tristique bibendum arcu, a interdum felis cursus eget. Cras semper iaculis massa. Cras nec tortor eu tortor maximus ultrices. Duis eleifend nibh sit amet urna tristique, sed ullamcorper odio egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec tempus non tellus in varius..</p>
+      <p>1. Your survey should have 10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question.
+</p><p>
+2. Your `server.js` file should require the basic npm packages we've used in class: `express`, `body-parser` and `path`.
+</p><p>
+3. Your `htmlRoutes.js` file should include two routes:
+</p><p>
+   * A GET Route to `/survey` which should display the survey page.<br>
+   * A default USE route that leads to `home.html` which displays the home page. 
+</p><p>
+4. Your `apiRoutes.js` file should contain two routes:
+</p><p>
+   * A GET route with the url `/api/friends`. This will be used to display a JSON of all possible friends.<br>
+   * A POST routes `/api/friends`. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic. 
+</p><p>
+5. You should save the data in your app as an array of objects. Each of these objects should roughly follow the format below.
+</p><p>
+```json<br>
+{<br>
+  "name":"Ahmed",<br>
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",<br>
+  "scores":[<br>
+      5,<br>
+      1,<br>
+      4,<br>
+      4,<br>
+      5,<br>
+      1,<br>
+      2,<br>
+      5,<br>
+      4,<br>
+      1<br>
+    ]<br>
+}<br>
+```<br>
+</p><p>
+6. Determine the user's most compatible friend using the following as a guide:
+</p><p>
+   * Convert each user's results into a simple array of numbers (ex: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`).<br>
+   * With that done, compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the `totalDifference`.<br>
+</p><p>
+     * Example:<br><br>
+       * User 1: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`<br>
+       * User 2: `[3, 2, 6, 4, 5, 1, 2, 5, 4, 1]`<br>
+       * Total Difference: **2 + 1 + 2 =** **_5_**<br>
+</p><p>
+   * Remember to use the absolute value of the differences. Put another way: no negative solutions! Your app should calculate both `5-3` and `3-5` as `2`, and so on. <br>
+   * The closest match will be the user with the least amount of difference.
+</p><p>
+7. Once you've found the current user's most compatible friend, display the result as a modal pop-up.
+</p><p>
+   * The modal should display both the name and picture of the closest match. 
+ </p>
           
 
       <h4>Leave a Comment:</h4>
