@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
         <meta name="format-detection" content="telephone=no">
@@ -7,188 +8,98 @@
         <meta name="description" content="Violate Responsive Admin Template">
         <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
 
-        <title>Project 2</title>
+        <title>Project Picker</title>
             
         <!-- CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/animate.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/form.css" rel="stylesheet">
-        <link href="css/calendar.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-        <link href="css/icons.css" rel="stylesheet">
-        <link href="css/generics.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/generics.css" rel="stylesheet"> 
     </head>
     <body id="skin-blur-chrome">
-
-        <header id="header" class="media">
-            <a href="" id="menu-toggle"></a> 
-            <a class="logo pull-left" href="index.html">Project Picker</a>
+       
+        <section id="login">
+        <center>
+            <header>
+                <h1>Project Picker</h1>
+               <img src="img/P2logo.png" alt="" class="homeicon">
+            </header>
+        </center>
+            <div class="clearfix"></div>
             
-            <div class="media-body">
-                <div class="media" id="top-menu">
-
-
-                    
-
-                    <div id="time" class="pull-right">
-                        <span id="hours"></span>
-                        :
-                        <span id="min"></span>
-                        :
-                        <span id="sec"></span>
-                    </div>
-                    
-                    <div class="media-body">
-                        <input type="text" class="main-search">
-                    </div>
+            <!-- Login -->
+            <div class="row">
+                <div class="col-md-4 "></div>
+                <div class="col-md-8 ">
+            <form class="box tile animated active" id="box-login">
+               
+                <h2 class="m-t-0 m-b-15">Login</h2>
+                <input type="text" class="login-control m-b-10" placeholder="Username or Email Address">
+                <input type="password" class="login-control" placeholder="Password">
+                <div class="checkbox m-b-20">
+                    <label>
+                        <input type="checkbox">
+                        Remember Me
+                    </label>
                 </div>
+                <button class="btn btn-sm m-r-5">Sign In</button>
+                
+                <small>
+                    <a class="box-switcher" data-switch="box-register" href="">Don't have an Account?</a> or
+                    <a class="box-switcher" data-switch="box-reset" href="">Forgot Password?</a>
+                </small>
+            </form>
             </div>
-        </header>
-        
-        <div class="clearfix"></div>
-        
-        <section id="main" class="p-relative" role="main">
-            
-            <!-- Sidebar -->
-            <aside id="sidebar">
-                
-                <!-- Sidbar Widgets -->
-                <div class="side-widgets overflow">
-                    <!-- Profile Menu -->
-                    <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
-                        <a href="" data-toggle="dropdown">
-                            <img class="profile-pic animated" src="img/profile-pics/profilepic.JPG" alt="">
-                        </a>
-                        <ul class="dropdown-menu profile-menu">
-                            <li><a href="">My Profile</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                            <li><a href="">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                        </ul>
-                        <h4 class="m-0">Stephen Ruan</h4>
-                        @ruan060606
-                    </div>
-                    
-                    <!-- Calendar -->
-                    <div class="s-widget m-b-25">
-                        <div id="sidebar-calendar"></div>
-                    </div>
-                    
-
-                    
-                    <!-- Projects -->
-                    <div class="s-widget m-b-25">
-                        <h2 class="tile-title">
-                            Projects on going
-                        </h2>
-                        
-                        <div class="s-widget-body">
-                            <div class="side-border">
-                                <small>Project Picker</small>
-                                <div class="progress progress-small">
-                                     <a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-danger" style="width: 60%;" data-original-title="60%">
-                                          <span class="sr-only">60% Complete</span>
-                                     </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Side Menu -->
-                <ul class="list-unstyled side-menu">
-                    <li class="active">
-                        <a class="sa-side-home" href="index.html">
-                            <span class="menu-item">Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="sa-side-typography" href="typography.html">
-                            <span class="menu-item">Add Project</span>
-                        </a>
-                    </li>
-                                        <li>
-                        <a class="sa-side-page" href="login.html">
-                            <span class="menu-item">Logout</span>
-                        </a>
-                    </li>
-                </ul>
-
-            </aside>
-        
-            <!-- Content -->
-            <section id="content" class="container">
-            
-    
-
-                <!-- Breadcrumb -->
-                <center>
-                <img src="img/P2logo.png" alt="" class="homeicon">
-                </center>                
-                <!-- Shortcuts -->
-                
-            
-
-                
-                <!-- Main Widgets -->
-              			<center>
-                            <h1 class="display-3">Welcome to Project Picker!</h1>
-                        </center>
-                    </nav>
-                </div>
             </div>
-        </header>
-  
-            <center>
-                <p class="lead">Have you been having a hard time figuring out what to build next?  Let us help!  Project Picker is here to help you come up with ideas for your next coding project.  After answering a few questions, our database will help you decide which projects are best for you.  Whether you're looking for a Full Stack project or just wanting to brush up on your skills, Project Picker has the Project for you! </p>
-                   <hr class="whiter" />
-                <p>
-                    Please click continue to get started!
-                </p>
-                <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="../public/myQuestion.html" role="button">Continue</a>
-                </p>
-            </center>
-            </section>
+            
+            <!-- Register -->
+                        <div class="row">
+                <div class="col-md-4 "></div>
+                <div class="col-md-8 ">
+            <form class="box animated tile" id="box-register">
+                <h2 class="m-t-0 m-b-15">Register</h2>
+                <input type="text" class="login-control m-b-10" placeholder="Full Name">
+                <input type="text" class="login-control m-b-10" placeholder="Username">
+                <input type="email" class="login-control m-b-10" placeholder="Email Address">    
+                <input type="password" class="login-control m-b-10" placeholder="Password">
+                <input type="password" class="login-control m-b-20" placeholder="Confirm Password">
 
+                <button class="btn btn-sm m-r-5">Register</button>
 
-        </section>
+                <small><a class="box-switcher" data-switch="box-login" href="">Already have an Account?</a></small>
+            </form>
+            </div>
+        </div>
+
+            <!-- Forgot Password -->
+                        <div class="row">
+                <div class="col-md-4 "></div>
+                <div class="col-md-8 ">
+            <form class="box animated tile" id="box-reset">
+                <h2 class="m-t-0 m-b-15">Reset Password</h2>
+                <p>PLEASE INPUT THE EMAIL FOR THE ACCOUNT!</p>
+                <input type="email" class="login-control m-b-20" placeholder="Email Address">    
+
+                <button class="btn btn-sm m-r-5">Reset Password</button>
+
+                <small><a class="box-switcher" data-switch="box-login" href="">Already have an Account?</a></small>
+            </form>
+             </div>
+         </div>
+        </section> 
+                           
         
         <!-- Javascript Libraries -->
         <!-- jQuery -->
         <script src="js/jquery.min.js"></script> <!-- jQuery Library -->
-        <script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
-        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
-
+        
         <!-- Bootstrap -->
         <script src="js/bootstrap.min.js"></script>
-
-        <!-- Charts -->
-        <script src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->
-        <script src="js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
-        <script src="js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
-        <script src="js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
-
-        <script src="js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
-        <script src="js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
-        <script src="js/charts.js"></script> <!-- All the above chart related functions -->
-
-        <!-- Map -->
-        <script src="js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
-        <script src="js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
-
+        
         <!--  Form Related -->
         <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
-
-        <!-- UX -->
-        <script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
-
-        <!-- Other -->
-        <script src="js/calendar.min.js"></script> <!-- Calendar -->
-        <script src="js/feeds.min.js"></script> <!-- News Feeds -->
         
-
         <!-- All JS functions -->
         <script src="js/functions.js"></script>
     </body>

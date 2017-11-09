@@ -1,66 +1,135 @@
 <!DOCTYPE html>
-<html>
-<head>
-  
-	<title>Project Picker</title>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-	</script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
 
-</head>
-<body>
-	<header>
-		<div class="row">
-			<div class="col-md-12">
-				<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-				  <a class="navbar-brand" href="#">Project Picker</a>
-				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				    <span class="navbar-toggler-icon"></span>
-				  </button>
+        <meta name="description" content="Violate Responsive Admin Template">
+        <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
 
-				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-				    <ul class="navbar-nav mr-auto">
-				      <li class="nav-item active">
-				        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-				      </li>
-				      <li class="nav-item">
-				        <a class="nav-link" href="#">Link</a>
-				      </li>
-				      <li class="nav-item dropdown">
-				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				          Dropdown
-				        </a>
-				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				          <a class="dropdown-item" href="#">Action</a>
-				          <a class="dropdown-item" href="#">Another action</a>
-				          <div class="dropdown-divider"></div>
-				          <a class="dropdown-item" href="#">Something else here</a>
-				        </div>
-				      </li>
-				      <li class="nav-item">
-				        <a class="nav-link disabled" href="#">Disabled</a>
-				      </li>
-				    </ul>
-				    <form class="form-inline my-2 my-lg-0">
-				      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				    </form>
-				  </div>
-				</nav>
-			</div>
-		</div>
-	</header>
-	<!DOCTYPE html>
-<html lang="en">
-<body>
+        <title>Project Picker</title>
+            
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/form.css" rel="stylesheet">
+        <link href="css/calendar.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/icons.css" rel="stylesheet">
+        <link href="css/generics.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    </head>
+    <body id="skin-blur-chrome">
 
+        <header id="header" class="media">
+            <a href="" id="menu-toggle"></a> 
+            <a class="logo pull-left" href="index.html">Project Picker</a>
+            
+            <div class="media-body">
+                <div class="media" id="top-menu">
+
+
+                    
+
+                    <div id="time" class="pull-right">
+                        <span id="hours"></span>
+                        :
+                        <span id="min"></span>
+                        :
+                        <span id="sec"></span>
+                    </div>
+                    
+                    <div class="media-body">
+                        <input type="text" class="main-search">
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="clearfix"></div>
+        
+        <section id="main" class="p-relative" role="main">
+            
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                
+                <!-- Sidbar Widgets -->
+                <div class="side-widgets overflow">
+                    <!-- Profile Menu -->
+                    <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
+                        <a href="" data-toggle="dropdown">
+                            <img class="profile-pic animated" src="img/profile-pics/profilepic.JPG" alt="">
+                        </a>
+                        <ul class="dropdown-menu profile-menu">
+                            <li><a href="">My Profile</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                        </ul>
+                        <h4 class="m-0">Stephen Ruan</h4>
+                        @ruan060606
+                    </div>
+                    
+                    <!-- Calendar -->
+                    <div class="s-widget m-b-25">
+                        <div id="sidebar-calendar"></div>
+                    </div>
+                    
+
+                    
+                    <!-- Projects -->
+                    <div class="s-widget m-b-25">
+                        <h2 class="tile-title">
+                            Projects on going
+                        </h2>
+                        
+                        <div class="s-widget-body">
+                            <div class="side-border">
+                                <small>Project Picker</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-danger" style="width: 60%;" data-original-title="60%">
+                                          <span class="sr-only">60% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Side Menu -->
+                <ul class="list-unstyled side-menu">
+                    <<li class="active">
+                        <a class="sa-side-home" href="home.html">
+                            <span class="menu-item">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-typography" href="myQuestion.html">
+                            <span class="menu-item">Add Project</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-page" href="index.html">
+                            <span class="menu-item">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </aside>
+        
+            <!-- Content -->
+            <section id="content" class="container">
+            
+    
+  <div class="row">
     <div class="col-sm-9">
       <hr>
        <h1>Recommended Project:</h1>
+       <hr>
       <h2>Friend Finder</h2>
+      <center>
+        <img class="media" src="../public/assets/images/ff.png">
+      </center>
       <br><br>
       <p>In this activity, you'll build a compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
 
@@ -69,13 +138,58 @@
       <br><br>
       
       <hr>
-      <h2>Instructions</h2>
-      <br><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu mauris sit amet nibh sagittis pharetra in a mauris. Fusce luctus, mauris interdum fringilla condimentum, lacus risus convallis dui, non consectetur dolor lectus at est. Suspendisse pellentesque ornare mauris, eu vulputate eros vehicula et. Vestibulum ultrices viverra blandit. Sed augue lorem, pellentesque sed rutrum non, varius et diam. Vestibulum a tempus magna. Mauris tincidunt sapien vitae orci venenatis, ut maximus felis mattis. Vivamus bibendum tristique justo elementum lobortis. Vestibulum congue neque eget felis vulputate pretium. Suspendisse libero nunc, vehicula ac consectetur vitae, dapibus in risus.
-      	 <br><br>
+<h2>Instructions</h2>
+<br><br>
+<p>1. Your survey should have 10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question.
+</p><p>
+2. Your `server.js` file should require the basic npm packages we've used in class: `express`, `body-parser` and `path`.
+</p><p>
+3. Your `htmlRoutes.js` file should include two routes:
 
-		Duis nec leo semper, convallis massa at, pretium risus. Nam mattis purus vel dui vulputate imperdiet. Nunc iaculis tempor justo rhoncus volutpat. Mauris ac semper quam, vel facilisis lacus. Proin sodales rhoncus sollicitudin. Nam tristique bibendum arcu, a interdum felis cursus eget. Cras semper iaculis massa. Cras nec tortor eu tortor maximus ultrices. Duis eleifend nibh sit amet urna tristique, sed ullamcorper odio egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec tempus non tellus in varius..</p>
-		      <hr>
+   * A GET Route to `/survey` which should display the survey page.
+   * A default USE route that leads to `home.html` which displays the home page. 
+</p><p>
+4. Your `apiRoutes.js` file should contain two routes:
+
+   * A GET route with the url `/api/friends`. This will be used to display a JSON of all possible friends.
+   * A POST routes `/api/friends`. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic. 
+</p><p>
+5. You should save the data in your app as an array of objects. Each of these objects should roughly follow the format below.
+
+```json
+{
+  "name":"Ahmed",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      5,
+      1,
+      4,
+      4,
+      5,
+      1,
+      2,
+      5,
+      4,
+      1
+    ]
+}
+```
+</p><p>
+6. Determine the user's most compatible friend using the following as a guide:
+
+   * Convert each user's results into a simple array of numbers (ex: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`).
+   * With that done, compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the `totalDifference`.
+     * Example: 
+       * User 1: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`
+       * User 2: `[3, 2, 6, 4, 5, 1, 2, 5, 4, 1]`
+       * Total Difference: **2 + 1 + 2 =** **_5_**
+   * Remember to use the absolute value of the differences. Put another way: no negative solutions! Your app should calculate both `5-3` and `3-5` as `2`, and so on. 
+   * The closest match will be the user with the least amount of difference.
+</p><p>
+7. Once you've found the current user's most compatible friend, display the result as a modal pop-up.
+   * The modal should display both the name and picture of the closest match. 
+      </p>
+      <hr>
 
       <h4>Leave a Comment:</h4>
       <form role="form">
@@ -90,28 +204,34 @@
       
       <div class="row">
         <div class="col-sm-2 text-center">
-          <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+          <img src="../assets/images/avatar1.png" class="img-circle" height="65" width="65" alt="Avatar">
         </div>
         <div class="col-sm-10">
-          <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h4>Whit <small>Sep 29, 2015, 9:12 PM</small></h4>
+          <p>
+            Excellent project choice!
+          </p>
           <br>
         </div>
         <div class="col-sm-2 text-center">
-          <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+          <img src="../assets/images/avatar2.png" class="img-circle" height="65" width="65" alt="Avatar">
         </div>
         <div class="col-sm-10">
-          <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h4>Rachel <small>Sep 25, 2015, 8:25 PM</small></h4>
+          <p>
+            This was a perfect choice for our team!
+          </p>
           <br>
           <p><span class="badge">1</span> Comment:</p><br>
           <div class="row">
             <div class="col-sm-2 text-center">
-              <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+              <img src="../assets/images/avatar3.png" class="img-circle" height="65" width="65" alt="Avatar">
             </div>
             <div class="col-xs-10">
-              <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
-              <p>Lorem ipsum</p>
+              <h4>Collin <small>Sep 25, 2015, 8:28 PM</small></h4>
+              <p>
+                YAAAAAAHHHH!!!
+              </p>
               <br>
             </div>
           </div>
@@ -121,9 +241,47 @@
   </div>
 </div>
 
-<footer class="container-fluid">
-  <p>Footer Text</p>
-</footer>
+          
+            </section>
 
-</body>
+
+        </section>
+        
+        <!-- Javascript Libraries -->
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script> <!-- jQuery Library -->
+        <script src="js/jquery-ui.min.js"></script> <!-- jQuery UI -->
+        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Charts -->
+        <script src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->
+        <script src="js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
+        <script src="js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
+        <script src="js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
+
+        <script src="js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
+        <script src="js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
+        <script src="js/charts.js"></script> <!-- All the above chart related functions -->
+
+        <!-- Map -->
+        <script src="js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
+        <script src="js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
+
+        <!--  Form Related -->
+        <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+
+        <!-- UX -->
+        <script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+
+        <!-- Other -->
+        <script src="js/calendar.min.js"></script> <!-- Calendar -->
+        <script src="js/feeds.min.js"></script> <!-- News Feeds -->
+        
+
+        <!-- All JS functions -->
+        <script src="js/functions.js"></script>
+    </body>
 </html>

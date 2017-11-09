@@ -2270,4 +2270,6 @@ a.list-group-item.active > .badge,
 .btn-group-justified {
     width: 66% !important;
 }
-
+.lead {
+    width: 80%;
+}
