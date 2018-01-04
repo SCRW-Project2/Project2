@@ -2133,7 +2133,6 @@ a.list-group-item.active > .badge,
         display: none;
     }
     
-    /* Sidebar + Content */
     #content {
         margin-left: 0;
     }
